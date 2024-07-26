@@ -24,7 +24,7 @@ class Controller {
       this.model.addMole();
       this.view.renderGameBoard(this.model.gameBoard, this.model.hasSnake, this.model.snakePosition);
       this.setMoleDisappearTimer();
-    }, 500);
+    }, 1000);
 
     this.snakeInterval = setInterval(() => {
       this.model.addSnake();
