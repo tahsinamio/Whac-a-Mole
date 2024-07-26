@@ -33,11 +33,11 @@ class View {
   }
 
   updateScore(score) {
-    this.scoreElement.textContent = `Score: ${score}`;
+    this.scoreElement.textContent = `Let's Go, your total score is ${score}`;
   }
 
   updateTimer(timeLeft) {
-    this.timerElement.textContent = `Time Left: ${timeLeft}`;
+    this.timerElement.textContent = `${timeLeft}`;
   }
 
   showGameOver(reason) {
