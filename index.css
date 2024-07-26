@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.timer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 820px;
+}
+
+.block {
+    width: 200px;
+    height: 200px;
+    border: 2px solid brown;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mole {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.snake {
+  max-width: 100%;
+  max-height: 100%;
+}
