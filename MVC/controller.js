@@ -55,7 +55,6 @@ class Controller {
         this.view.renderGameBoard(this.model.gameBoard, true, -1);
         this.endGame('snake');
       } else if (this.model.gameBoard[id].hasMole) {
-        // Clear the disappear timer for this mole
         if (this.moleDisappearIntervals[id]) {
           clearTimeout(this.moleDisappearIntervals[id]);
           delete this.moleDisappearIntervals[id];
@@ -71,12 +70,7 @@ class Controller {
 
   setMoleDisappearTimer() {
     this.model.gameBoard.forEach((slot, index) => {
-      if (slot.hasMole) {
-        // Clear existing timer if there is one
-        if (this.moleDisappearIntervals[index]) {
-          clearTimeout(this.moleDisappearIntervals[index]);
-        }
-        
+      if (slot.hasMole && !this.moleDisappearIntervals[index]) {
         const timer = setTimeout(() => {
           this.model.removeMole(index);
           this.view.renderGameBoard(this.model.gameBoard, this.model.hasSnake, this.model.snakePosition);
